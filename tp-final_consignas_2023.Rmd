@@ -1,0 +1,76 @@
+---
+title: "TP Final - Consignas"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Trabajo Final de la materia "Machine learning con aplicaciones espaciales"
+
+
+Este dataset corresponde a precios de propiedades del estado de California. 
+
+Las variables del dataset son las siguientes:
+
+1) **Valor medio de la vivienda:** (Median house value)valor medio de la vivienda para los hogares dentro de un bloque (medido en dólares estadounidenses) [$]
+2) **Ingresos medios:** (Median Income) ingresos medios de los hogares dentro de una cuadra de casas (medidos en decenas de miles de dólares estadounidenses) [10k $]
+3) **Edad promedio:**(Median Age) Edad promedio de una casa dentro de una cuadra; un número menor es un edificio más nuevo [años]
+4) **Total de habitaciones:**(Total Rooms) número total de habitaciones dentro de un barrio
+5) **Total de dormitorios:** (Total Bedrooms)número total de dormitorios dentro de un barrio
+6) **Población:**(Population) Número total de personas que residen dentro de una cuadra.
+7) **Hogares:** (Households) número total de hogares, un grupo de personas que residen dentro de una unidad de hogar, para un barrio.
+8) **Latitud:** 
+9) **Longitud:** 
+10) Distancia a la costa: Distancia al punto de la costa más cercano [m]
+11) Distancia a Los Ángeles: Distancia al centro de Los Ángeles [m]
+12) Distancia a San Diego: Distancia al centro de San Diego [m]
+13) Distancia a San José: Distancia al centro de San José [m]
+14) Distancia a San Francisco: Distancia al centro de San Francisco [m]
+
+
+Más información disponible en:
+
+https://www.kaggle.com/fedesoriano/california-housing-prices-data-extra-features 
+
+
+#### Objetivo
+Teniendo en cuenta todas las variables disponibles, estimar el **Valor medio de la vivienda** (Median House Value) mediante Modelos de Machine Learning.
+
+
+```{r warning=FALSE, message=FALSE}
+library(tidymodels)
+library(tidyverse)
+```
+
+#### Ingreso los datos
+
+```{r}
+houses <- read_csv("https://raw.githubusercontent.com/data-datum/datasets/main/california_houses.csv")
+```
+
+
+## El Informe deberá incluir:
+
+1. Breve descripción del dataset y un análisis descriptivo de aquellas variables que considere de importancia para el caso de estudio  (como mínimo describa 3 variables).
+
+2. Modelado con un algoritmo teniendo en cuenta el objetivo planteado.
+
+Las posibilidades son:
+
+* DT sin tunning
+
+* RF sin tunning
+
+3. Utilicé RMSE y MAE como métrica de los modelos utilizados en el punto anterior.  
+
+4. ¿Cuáles son las variables más importantes para el modelo utilizado? 
+Realice el gráfico de importancia de variables correspondientes (si elige RF como modelo) sino el árbol de decisión correspondiente. 
+
+
+El trabajo deberá ser entregado en formato .Rmd (debe poder compilarse) junto al .html generado.
+
+
+El trabajo es INDIVIDUAL. 
+
